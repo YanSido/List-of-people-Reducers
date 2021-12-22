@@ -5,15 +5,16 @@ export default function Remove() {
   const { list, dispatch } = useContext(mainContext);
 
   function handleClick(e) {
+    console.log(e.target.parentElement.parentElement.parentElement);
     if (e.target.parentElement.parentElement.id === "remove-div")
       dispatch({
         type: "REMOVE_FRIEND",
-        data: { name: e.target.parentElement.parentElement.parentElement.innerText },
+        data: { name: e.target.parentElement.parentElement.parentElement.parentElement.innerText },
       });
-    if (e.target.parentElement.parentElement.id === "people")
+    if (e.target.parentElement.parentElement.parentElement.id === "people")
       dispatch({
         type: "REMOVE_FRIEND",
-        data: { name: e.target.parentElement.parentElement.innerText },
+        data: { name: e.target.parentElement.parentElement.parentElement.innerText },
       });
   }
 

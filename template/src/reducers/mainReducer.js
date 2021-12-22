@@ -15,6 +15,20 @@ export const mainReducer = (state, action) => {
         if (item.name + " " + String(item.age) !== action.data.name) return item;
       });
       return [...updatedList];
+    case "UPDATE_FRIEND":
+      let updatedState = state.map((item) => {
+        if (item.name + " " + String(item.age) === action.data.oldName) {
+          if (action.data.newName !== "" && action.data.age !== "") {
+            return { ...item, age: action.data.age, name: action.data.newName };
+          } else if (action.data.newName !== "" && action.data.age === "") {
+            return { ...item, name: action.newName };
+          } else if (action.data.newName === "" && action.data.age !== "") {
+            return { ...item, age: action.data.age };
+          }
+        }
+        return item;
+      });
+      return [...updatedState];
     default:
       return [...state];
   }
