@@ -7,6 +7,9 @@ export const mainReducer = (state, action) => {
         if (item.name.toLowerCase().includes(action.name.toLowerCase())) return item.name;
       });
       return [...stateAfterFilter];
+    case "ADD_FRIEND":
+      const newPeople = action.data;
+      return [...state, newPeople];
     default:
       return [...state];
   }

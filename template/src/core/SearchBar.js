@@ -11,7 +11,6 @@ export default function SearchBar() {
   }, [filter]);
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     setFilter(e.target.value);
     dispatch({ type: "FILTER_LIST", name: e.target.value });
   };
@@ -21,7 +20,7 @@ export default function SearchBar() {
   };
 
   return (
-    <Container style={{ margin: "0 auto", width: "50%" }}>
+    <Container style={{ margin: "0 auto", marginTop: "20px", width: "50%" }}>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control
