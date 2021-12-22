@@ -2,12 +2,11 @@ export const mainReducer = (state, action) => {
   switch (action.type) {
     case "INITIAL_DATA":
       return [...action.data];
-    case "UPDATE_LIST":
-      let updatedState = state.map((item) => {
-        if (item.id === action.id) return { ...item, title: action.title };
-        return item;
+    case "FILTER_LIST":
+      let stateAfterFilter = state.filter((item) => {
+        if (item.name.toLowerCase().includes(action.name.toLowerCase())) return item.name;
       });
-      return [...updatedState];
+      return [...stateAfterFilter];
     default:
       return [...state];
   }
