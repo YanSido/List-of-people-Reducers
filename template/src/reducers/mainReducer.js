@@ -10,6 +10,11 @@ export const mainReducer = (state, action) => {
     case "ADD_FRIEND":
       const newPeople = action.data;
       return [...state, newPeople];
+    case "REMOVE_FRIEND":
+      const updatedList = state.filter((item) => {
+        if (item.name + " " + String(item.age) !== action.data.name) return item;
+      });
+      return [...updatedList];
     default:
       return [...state];
   }

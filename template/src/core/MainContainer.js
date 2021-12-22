@@ -8,8 +8,8 @@ export default function MainContainer() {
     <div>
       <MainState>
         <SearchBar />
-        <PeopleList />
         <hr />
+        <PeopleList />
       </MainState>
     </div>
   );

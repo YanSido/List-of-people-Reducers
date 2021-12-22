@@ -1,0 +1,15 @@
+#people {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#people:hover {
+  transform: scale(1.05);
+  background-color: rgb(221, 223, 221);
+}
+
+#main-container {
+  width: 40%;
+}
