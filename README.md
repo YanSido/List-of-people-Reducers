@@ -28,3 +28,4 @@ Github: [@Yan Sidorenko](https://github.com/YanSido)
 
 Project Link: [Sido's List of People - Reducers](https://github.com/YanSido/List-of-people-Reducers)
 
+Heroku: [https://list-of-people-reducers.herokuapp.com/](https://list-of-people-reducers.herokuapp.com/)
